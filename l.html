@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix Amount Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Netflix Amount Calculator</h1>
+    <form>
+      <div class="form-group">
+        <label for="plan">Select a plan:</label>
+        <select class="form-control" id="plan">
+          <option value="0">Select a plan</option>
+          <option value="8.99">Basic ($8.99/month)</option>
+          <option value="13.99">Standard ($13.99/month)</option>
+          <option value="17.99">Premium ($17.99/month)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="months">Number of months:</label>
+        <input type="number" class="form-control" id="months" min="1" value="1">
+      </div>
+      <div class="form-group">
+        <label for="result">Total amount:</label>
+        <input type="text" class="form-control" id="result" readonly>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+    </form>
+  </div>
+  <script>
+    function calculate() {
+      var plan = parseFloat(document.getElementById("plan").value);
+      var months = parseInt(document.getElementById("months").value);
+      var result = plan * months;
+      document.getElementById("result").value = "$" + result.toFixed(2);
+    }
+  </script>
+</body>
+</html>

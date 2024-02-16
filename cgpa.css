@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Estonia&family=Quicksand:wght@400;500&family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 300;
+    font-size: 0.925rem;
+}
+
+body {
+    background-image:url(https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg);
+    background-size: cover;
+    text-align: center;
+    
+}
+
+
+
+.top-heading {
+    color: crimson;
+    padding: 62px 0;
+    letter-spacing: 2.5px;
+    color: rgb(241, 212, 27);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding-top: 150px;
+    padding-bottom: 15px;
+    
+}
+.top-heading:hover{
+    color: azure;
+    
+}
+
+.g{
+    font-size: 1.6rem;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    color: black;
+    text: size adjust 1px;;
+}
+
+.container {
+    background-color: rgba(200, 208, 203, 0.666);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 50px;
+    box-shadow: 1px 2px 5px 2px black;
+    text-align: center;
+    margin: auto;
+    
+    
+  border: 3px solid rgb(8, 9, 8);
+  padding: 10px;
+  height: 300px;
+    
+}
+
+
+#mini-container {
+    display: none;
+}
+
+.starter {
+    padding-bottom: 32px;
+    font-size: 1rem;
+    padding-top: 60px;
+}
+
+.starter p {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.buttons {
+    margin: 0 20px;
+    border: 4px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgb(241, 237, 231);
+    box-shadow: 0 1px 4px black;
+}
+
+.buttons:hover {
+    background: rgb(129, 129, 222);
+    box-shadow: 0 1px 3px black;
+    border: 1px solid rgb(10, 9, 9);
+    color:kh;
+}
+
+#choose_dropdown {
+    padding: 0.05rem 0;
+}
+
+#choose_dropdown p {
+    padding: 5px 0 15px;
+    letter-spacing: 0.5px;
+    font-size: 0.925rem;
+}
+
+#courses_drop_down {
+    padding: 2px;
+    border: solid 1px blue;
+    border-radius: 5px;
+}
+
+.dropdown-submit-btn {
+    width: 3.75rem;
+    font-size: 0.92rem;
+    padding: 2px 1px;
+}
+
+#main-table {
+    display: none;
+}
+
+#main-table p {
+    padding: 5px 0;
+}
+
+#inner_table {
+    width: 100%;
+    margin: auto;
+}
+
+th {
+    width: 8%;
+    background-color: rgba(252, 251, 247, 0.474);
+    padding: 15px 0 0 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+td {
+    width: 8%;
+    background-image:url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);
+    padding: 10px 0px;
+}
+
+input, .grad {
+    width: 80%;
+    background-color: rgba(245, 245, 245, 0.736);
+    padding: 5px 5px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 7px;
+    color: rgb(50, 0, 0);
+}
+
+.calc-btn {
+    width: 35%;
+    margin: 10px 0;
+}
+
+.result-display {
+    display: none;
+    text-align: center;
+    padding: 10px 2px;
+    border: 1.5px solid black;
+    width: 40%;
+    margin: 10px auto;
+    border-radius: 7.5px;
+    box-shadow: 1px 2px 3px black;
+    background-color:beige;
+    color: darkred;
+    display: hidden;
+    transition: all 0.3s;
+}
+
+.result-display:hover {
+    transform: scale(1.04);
+}
+
+#show_result {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+}
+
+#final-val {
+    color: blue;
+    font-weight: bolder;
+}

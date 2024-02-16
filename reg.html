@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="reg.css">
+</head>
+<body >
+	<div class="container">
+		<div class="form">
+		<h3>College Registration Form</h3>
+		<form name="registrationForm" onsubmit=" return validateForm()"  method="post" action="http://127.0.0.1:3765">
+			<div class="inputbox">
+				<label for="firstName">First Name:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="Enter your First Name:" >
+			</div>
+			<div class="inputbox">
+				<label for="lastName">Last Name:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Enter your Second Name:"  width="60px" required>
+			</div>
+			<div class="inputbox">
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email" placeholder="Enter your Email:" required>
+			</div>
+			<div class="inputbox">
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" placeholder="Enter your password:" required>
+			</div>
+			<div class="inputbox">
+				<label for="phone">Phone:</label>
+				<input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter your Mobile:"required>
+			</div>
+			<div class="inputbox">
+				<label for="dob">Date of Birth:</label>
+				<input type="date" name="dob" id="dob" required>
+			</div>
+			<div class="inputbox">
+				<label for="gender">Gender:</label>
+				<input type="radio" name="gender" value="male" id="male" required><label for="male">Male</label>
+				<input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+				<input type="radio" name="gender" value="other" id="other"><label for="other">Other</label>
+			</div>
+			<div class="inputbox">
+				<label for="course">Course:</label>
+				<select name="course" id="course" required>
+					<option value="">Select a course</option>
+					<option value="B.Tech">B.Tech</option>
+					<option value="B.Arch">B.Arch</option>
+					<option value="BBA">BBA</option>
+					<option value="BCA">BCA</option>
+				</select>
+			</div>
+			<div class="inputbox">
+			<input type="submit" value="submit">
+		</div>
+		</form>
+		</div>
+	</div>
+
+
+	<script>
+		function validateForm() {
+			var firstName = document.forms["registrationForm"]["firstName"].value;
+			var lastName = document.forms["registrationForm"]["lastName"].value;
+			var email = document.forms["registrationForm"]["email"].value;
+			var phone = document.forms["registrationForm"]["phone"].value;
+			var dob = document.forms["registrationForm"]["dob"].value;
+			var gender = document.forms["registrationForm"]["gender"].value;
+			var course = document.forms["registrationForm"]["course"].value;
+
+			if (firstName == "" || lastName == "" || email == "" || phone == "" || dob == "" || gender == "" || course == "") {
+				alert("All fields are required!");
+				return false;
+			}
+
+			if (phone.length != 10 || isNaN(phone)) {
+				alert("Invalid phone number!");
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+</body>
+</html>
